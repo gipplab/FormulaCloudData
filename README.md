@@ -53,3 +53,8 @@ We can see there are actually 6 distinguished left-hand sides in zbMATH:
 4) `\varepsilon = mc^2`
 5) `e = mc^2`
 6) `hv = mc^2`
+
+If you have `parallel` installed, you can speed up the process. For example:
+```bash
+find . -type f | parallel 'grep "mrow(mi:E,mo:=,mrow(mi:m.*;[[:digit:]]*;..*;[3456789]$" {}' 2>/dev/null | awk '{print $1}'
+```
