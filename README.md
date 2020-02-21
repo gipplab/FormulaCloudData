@@ -37,17 +37,24 @@ Unzipped data requires 61GB of free disk space.
 You can download single parts if you do not need the entire dataset.
 If you are not interested in high-complex expressions, one can use the small version of the dataset.
 ```shell script
-...
+user@pc:~/zbmath$ wget https://github.com/ag-gipp/FormulaCloudData/releases/download/2.0-arxiv/arxmliv-distributions.zip
+user@pc:~/zbmath$ unzip arxmliv-distributions.zip
+```
+
+If you want to download all packages at once (11GB compressed), you can use the following command
+```shell script
+user@pc:~$ curl -s https://api.github.com/repos/ag-gipp/FormulaCloudData/releases/latest | grep "browser_download_url" | cut -d : -f 2,3 | tr -d \" | wget -qi -
 ```
 
 ##### arXMLiv-Small
 Unzipped data requires 6.2GB of free disk space. 
 This dataset contains only expressions that appear at least twice in one document. 
 Hence, many complex expressions do not appear in this data. 
-``` sh
-user@pc:~/zbmath$ wget https://github.com/ag-gipp/FormulaCloudData/releases/download/2.0-arxiv/arxmliv-distributions.zip
-user@pc:~/zbmath$ unzip arxmliv-distributions.zip
+```shell script
+user@pc:~/zbmath$ wget https://github.com/ag-gipp/FormulaCloudData/releases/download/3.0-arxiv-large/arxmliv-part1.zip
+user@pc:~/zbmath$ unzip arxmliv-part1.zip
 ```
+
 
 ##### zbMATH
 Unzipped data requires 1.1GB free disk space.
@@ -100,6 +107,6 @@ find . -type f | xargs -n 1 -P 32 gawk 'match($0, /^"mrow\(mi:E,mo:=,mrow\(mi:m.
 The repository also contains a converter (including source code) to convert the string representation back to the MathML representation.
 Simply use
 ```shell script
-user@pc/~: java -jar converter.jar "mrow(msub(mi:E,mn:0),mo:=,mrow(mi:m,mo:ivt,msup(mi:c,mn:2)))"
+user@pc/~$: java -jar converter.jar "mrow(msub(mi:E,mn:0),mo:=,mrow(mi:m,mo:ivt,msup(mi:c,mn:2)))"
 <mrow><msub><mi>E</mi><mn>0</mn></msub><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><msup><mi>c</mi><mn>2</mn></msup></mrow></mrow>
 ```
