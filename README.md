@@ -13,7 +13,7 @@ A. Greiner-Petter, M. Schubotz, F. Müller, C. Breitinger, H. S. Cohl, A. Aizawa
 
 The [preprint](https://arxiv.org/pdf/2002.02712.pdf) of the paper can be found on arXiv [https://arxiv.org/abs/2002.02712](https://arxiv.org/abs/2002.02712).
 
-```tex
+```bibtex
 @InProceedings{GreinerPetter2020,
   author    = {Andr{\'{e}} Greiner{-}Petter and
                Moritz Schubotz and
