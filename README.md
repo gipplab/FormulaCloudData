@@ -37,8 +37,8 @@ Unzipped data requires 61GB of free disk space.
 You can download single parts if you do not need the entire dataset.
 If you are not interested in high-complex expressions, one can use the small version of the dataset.
 ```shell script
-user@pc:~/zbmath$ wget https://github.com/ag-gipp/FormulaCloudData/releases/download/2.0-arxiv/arxmliv-distributions.zip
-user@pc:~/zbmath$ unzip arxmliv-distributions.zip
+user@pc:~/zbmath$ wget https://github.com/ag-gipp/FormulaCloudData/releases/download/3.0-arxiv-large/arxmliv-part1.zip
+user@pc:~/zbmath$ unzip arxmliv-part1.zip
 ```
 
 If you want to download all packages at once (11GB compressed), you can use the following command
@@ -51,8 +51,8 @@ Unzipped data requires 6.2GB of free disk space.
 This dataset contains only expressions that appear at least twice in one document. 
 Hence, many complex expressions do not appear in this data. 
 ```shell script
-user@pc:~/zbmath$ wget https://github.com/ag-gipp/FormulaCloudData/releases/download/3.0-arxiv-large/arxmliv-part1.zip
-user@pc:~/zbmath$ unzip arxmliv-part1.zip
+user@pc:~/zbmath$ wget https://github.com/ag-gipp/FormulaCloudData/releases/download/2.0-arxiv/arxmliv-distributions.zip
+user@pc:~/zbmath$ unzip arxmliv-distributions.zip
 ```
 
 
